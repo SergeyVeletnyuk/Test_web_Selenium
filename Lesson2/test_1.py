@@ -13,26 +13,26 @@ with open('testdata.yaml') as f:
     testdata = yaml.safe_load(f)
 
 
-# def test_step1(site, path_login, path_passwd, button, element1, result1):
-#     input1 = site.find_element("xpath", path_login)
-#     input1.send_keys("test")
-#     input2 = site.find_element("xpath", path_passwd)
-#     input2.send_keys("test")
-#     btn = site.find_element("xpath", button)
-#     btn.click()
-#     err_label = site.find_element("xpath", element1)
-#     assert err_label.text == result1
-#
-#
-# def test_step2(site, path_login, path_passwd, button, element2, result2):
-#     input1 = site.find_element("xpath", path_login)
-#     input1.send_keys(testdata['login'])
-#     input2 = site.find_element("xpath", path_passwd)
-#     input2.send_keys(testdata['passwd'])
-#     btn = site.find_element("xpath", button)
-#     btn.click()
-#     label = site.find_element("xpath", element2)
-#     assert label.text == result2
+def test_step1(site, path_login, path_passwd, button, element1, result1):
+    input1 = site.find_element("xpath", path_login)
+    input1.send_keys("test")
+    input2 = site.find_element("xpath", path_passwd)
+    input2.send_keys("test")
+    btn = site.find_element("xpath", button)
+    btn.click()
+    err_label = site.find_element("xpath", element1)
+    assert err_label.text == result1
+
+
+def test_step2(site, path_login, path_passwd, button, element2, result2):
+    input1 = site.find_element("xpath", path_login)
+    input1.send_keys(testdata['login'])
+    input2 = site.find_element("xpath", path_passwd)
+    input2.send_keys(testdata['passwd'])
+    btn = site.find_element("xpath", button)
+    btn.click()
+    label = site.find_element("xpath", element2)
+    assert label.text == result2
 
 
 def test_step3(site, path_login, path_passwd, button,
