@@ -57,4 +57,4 @@ def test_step3(site, path_login, path_passwd, button,
     save.click()
     post1 = site.find_element("xpath", post)
     assert post1.text == title_post
-    assert True
+
